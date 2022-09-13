@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.mydemo.mybatis.mapper.UserMapper">
+
+    <!-- Read -->
+    <select id="queryUserInfo" resultType="com.mydemo.mybatis.entity.User">
+        select * from UserInfo where id=#{id}
+    </select>
+
+    <select id="getUserList" resultType="com.mydemo.mybatis.entity.User">
+        select * from UserInfo
+    </select>
+</mapper>
